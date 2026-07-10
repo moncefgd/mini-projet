@@ -1,0 +1,414 @@
+/* =========================================================
+   Mini-Projet JavaScript - Feuille de style principale
+   ISTA Hay Salam - M105 Programmer en Javascript
+   ========================================================= */
+
+:root {
+  --primary: #43a047;
+  --primary-dark: #2e7d32;
+  --primary-light: #66bb6a;
+  --danger: #e53935;
+  --text-dark: #263238;
+  --text-light: #607d8b;
+  --bg-light: #f4f6f5;
+  --white: #ffffff;
+  --border: #d7dedb;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ---------- Pages d'authentification ---------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: var(--shadow);
+}
+
+.auth-card.large {
+  max-width: 560px;
+}
+
+.auth-card h1 {
+  color: var(--white);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+}
+
+.field-row {
+  display: flex;
+  gap: 12px;
+}
+.field-row .field {
+  flex: 1;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: var(--white);
+  font-size: 13px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 13px;
+  background: #388e3c;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.btn-primary:hover:not(:disabled) {
+  background: #2e7d32;
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 13px;
+}
+.auth-links a {
+  color: var(--white);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.error-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  color: #ffe3e1;
+  font-size: 13px;
+}
+.error-list li {
+  background: rgba(229, 57, 53, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.pwd-hint {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+  margin-top: -10px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* ---------- Layout applicatif ---------- */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.app-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 18px;
+}
+.app-header .logo .badge {
+  background: var(--primary);
+  color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.app-header .user-zone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.btn-logout {
+  background: var(--white);
+  border: 1.5px solid var(--danger);
+  color: var(--danger);
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.btn-logout:hover {
+  background: var(--danger);
+  color: var(--white);
+}
+
+.app-nav {
+  background: var(--primary-dark);
+}
+.app-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  overflow-x: auto;
+}
+.app-nav li a {
+  display: block;
+  padding: 12px 18px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.app-nav li a:hover,
+.app-nav li a.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.app-body {
+  display: flex;
+  min-height: calc(100vh - 170px);
+}
+
+.app-index {
+  width: 200px;
+  background: var(--white);
+  border-right: 1px solid var(--border);
+  padding: 16px 0;
+}
+.app-index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.app-index li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: var(--text-dark);
+  border-left: 3px solid transparent;
+}
+.app-index li a:hover,
+.app-index li a.active {
+  border-left-color: var(--primary);
+  background: #eaf5ea;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.app-content {
+  flex: 1;
+  padding: 26px;
+}
+
+.app-footer {
+  background: #2b2b2b;
+  color: #cfd8dc;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+.app-footer .social a {
+  color: #cfd8dc;
+  margin-left: 14px;
+  font-size: 16px;
+}
+.app-footer .social a:hover {
+  color: var(--primary-light);
+}
+
+/* ---------- Contenu / cartes ---------- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--primary-dark);
+  font-size: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.info-item {
+  background: var(--bg-light);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.info-item .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+.info-item .value {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.data-table th,
+table.data-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  text-align: left;
+}
+table.data-table th {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-weight: 700;
+}
+table.data-table tr:hover {
+  background: #f9fbf9;
+}
+
+.action-icons a,
+.action-icons button {
+  border: none;
+  background: none;
+  font-size: 15px;
+  margin-right: 10px;
+  color: var(--text-light);
+}
+.action-icons a.view { color: #1976d2; }
+.action-icons a.edit,
+.action-icons button.edit { color: #f57c00; }
+.action-icons button.delete { color: var(--danger); }
+
+.badge-status {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-status.attente { background: #fff3cd; color: #856404; }
+.badge-status.approuvee { background: #d4edda; color: #155724; }
+.badge-status.rejetee { background: #f8d7da; color: #721c24; }
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+}
+.btn-approve { background: #2e7d32; color: white; margin-right: 6px; }
+.btn-reject { background: #c62828; color: white; margin-right: 6px; }
+.btn-cancel { background: #757575; color: white; }
+.btn-add { background: var(--primary); color: white; }
+.btn-edit { background: #f57c00; color: white; }
+.btn-back { background: #607d8b; color: white; }
+
+form .field label { color: var(--text-dark); }
+form .field input,
+form .field select,
+form .field textarea {
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.message-box {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  color: #8a6d00;
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .app-body { flex-direction: column; }
+  .app-index { width: 100%; display: none; }
+  .field-row { flex-direction: column; }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Creer un compte - Mini Projet JavaScript</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-card large">
+    <h1>&#128100; CREATE ACCOUNT</h1>
+
+    <form id="createAccountForm" novalidate>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" required />
+        </div>
+        <div class="field">
+          <label for="prenom">Prenom</label>
+          <input type="text" id="prenom" required />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" min="1" required />
+        </div>
+        <div class="field">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" id="pseudo" required />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="field">
+          <label for="couleur">Couleur preferee</label>
+          <select id="couleur" required>
+            <option value="">-- choisir --</option>
+            <option value="red">Rouge</option>
+            <option value="blue">Bleu</option>
+            <option value="green">Vert</option>
+            <option value="maroon">Marron</option>
+            <option value="black">Noir</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Violet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="pays">Pays</label>
+          <input type="text" id="pays" required />
+        </div>
+        <div class="field">
+          <label for="devise">Devise</label>
+          <input type="text" id="devise" required />
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="avatar">Avatar (URL)</label>
+          <input type="url" id="avatar" required />
+        </div>
+        <div class="field">
+          <label for="photo">Photo (URL)</label>
+          <input type="url" id="photo" required />
+        </div>
+      </div>
+
+      <div class="checkbox-field">
+        <input type="checkbox" id="admin" />
+        <label for="admin">Compte administrateur</label>
+      </div>
+
+      <div class="field">
+        <label for="motDePasse">Mot de passe</label>
+        <input type="password" id="motDePasse" required />
+      </div>
+      <p class="pwd-hint">
+        Le mot de passe doit contenir au moins 8 caracteres, une majuscule,
+        une minuscule, un chiffre et un caractere special.
+      </p>
+
+      <div class="field">
+        <label for="confirmMotDePasse">Confirmer le mot de passe</label>
+        <input type="password" id="confirmMotDePasse" required />
+      </div>
+
+      <button type="submit" class="btn-primary" id="createBtn">CREER LE COMPTE</button>
+
+      <ul class="error-list" id="errorList"></ul>
+    </form>
+
+    <div class="auth-links">
+      Deja inscrit ? <a href="index.html">Se connecter</a>
+    </div>
+  </div>
+
+  <script src="js/createAccount.js"></script>
+</body>
+</html>
